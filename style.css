@@ -4,32 +4,35 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f8f9fa; /* Fundo levemente cinza */
+    background-color: #f8f9fa; 
     line-height: 1.6;
 }
 
 .container {
-    width: 90%;
+    width: 95%; /* Aumenta a largura para simular tela de app */
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 15px 0;
     clear: both;
 }
 
 h1, h2, h3 {
-    color: #007bff; /* Azul primário */
+    color: #172B4D; /* Cor escura, quase preto, para títulos */
 }
 
-/* Header */
+/* Header (Simulando o topo de um app) */
 header {
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 10px 0;
 }
 
 header h1 {
     margin: 0;
     float: left;
-    font-size: 1.8em;
+    font-size: 1.6em;
+    color: #007bff; /* Logo em azul */
+    font-weight: bold;
 }
 
 header nav {
@@ -45,18 +48,147 @@ header nav ul {
 
 header nav ul li {
     display: inline;
-    margin-left: 25px;
+    margin-left: 15px;
 }
 
 header nav ul li a {
-    color: #333;
+    color: #505050;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-size: 0.9em;
+    font-weight: 600;
 }
 
-header nav ul li a:hover {
-    color: #28a745; /* Verde de destaque */
+/* Seção Hero (Busca) */
+.hero-section {
+    background-color: white; /* Fundo branco para simular o topo do app */
+    padding: 30px 20px 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.hero-section h2 {
+    color: #172B4D;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.hero-section p {
+    font-size: 1em;
+    color: #6c757d;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Input de Busca (Simulando o campo do app) */
+#search-bar {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 25px; /* Bordas arredondadas como em app */
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Seção de Serviços (Grade de Ícones) */
+#servicos {
+    padding: 40px 0;
+    text-align: center;
+    background-color: white;
+}
+
+#servicos h3 {
+    text-align: left;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.servicos-grid {
+    display: flex;
+    justify-content: flex-start; /* Alinha à esquerda */
+    flex-wrap: wrap;
+    gap: 15px; /* Espaço entre os cards */
+}
+
+.servico-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 15px 10px;
+    width: 21%; /* 4 cards por linha em telas maiores, simula grid do app */
+    box-shadow: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Cores dos Ícones (Simulando o colorido do app) */
+.servico-card:nth-child(1) i { color: #FF6347; } /* Vermelho */
+.servico-card:nth-child(2) i { color: #4682B4; } /* Azul claro */
+.servico-card:nth-child(3) i { color: #3CB371; } /* Verde Médio */
+.servico-card:nth-child(4) i { color: #FFD700; } /* Dourado */
+
+.servico-card i {
+    font-size: 2em;
+    margin-bottom: 8px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%; /* Icone circular */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.servico-card h4 {
+    font-size: 0.9em;
+    color: #333;
+    margin: 5px 0 0;
+    line-height: 1.2;
+}
+
+/* Estilização da seção de Contato/Orçamento */
+#contato {
+    background-color: #007bff; /* Fundo azul para destaque do CTA */
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#contato h3 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+#contato form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Estilo do botão de ação - Laranja como na imagem de app */
+.cta-button-b, .cta-button-a {
+    display: block;
+    width: 100%;
+    background-color: #FF8C00; /* Laranja/Amarelo do CTA do app */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-button-b:hover, .cta-button-a:hover {
+    background-color: #e57e00;
+}
+
+/* Outros estilos (Rodapé e outros) */
+footer {
+    background-color: #172B4D;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
 /* Limpar float */
@@ -66,164 +198,19 @@ header nav ul li a:hover {
     clear: both;
 }
 
-/* Seção Hero */
-.hero-section {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero-section h2 {
-    color: white;
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.hero-section p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-.cta-button-a {
-    display: inline-block;
-    background-color: #28a745; /* Verde de destaque */
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.1em;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    font-weight: bold;
-}
-
-.cta-button-a:hover {
-    background-color: #218838;
-}
-
-/* Seção de Serviços */
-#servicos {
-    padding: 60px 0;
-    text-align: center;
-}
-
-.servicos-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.servico-card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 30px;
-    margin: 15px;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-}
-
-.servico-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-
-.servico-card i {
-    font-size: 3em;
-    color: #007bff;
-    margin-bottom: 15px;
-}
-
-.servico-card h4 {
-    margin-top: 0;
-}
-
-/* Seção Como Funciona */
-.alt-bg {
-    background-color: #e9ecef; /* Fundo secundário */
-    padding: 60px 0;
-    text-align: center;
-}
-
-.passos {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.passo-item {
-    width: 30%;
-    padding: 20px;
-}
-
-.passo-item .numero {
-    display: block;
-    font-size: 2em;
-    font-weight: bold;
-    color: #28a745;
-    margin-bottom: 10px;
-}
-
-/* Formulário de Contato */
-#contato {
-    padding: 60px 0;
-    text-align: center;
-}
-
-#contato form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-#contato input[type="text"],
-#contato input[type="email"],
-#contato textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-#contato textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.cta-button-b {
-    background-color: #007bff; /* Azul primário */
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.1em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.cta-button-b:hover {
-    background-color: #0056b3;
-}
-
-/* Footer */
-footer {
-    background-color: #343a40; /* Cinza escuro */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-.social-links a {
-    color: white;
-    font-size: 1.5em;
-    margin: 0 10px;
-    text-decoration: none;
+/* -- Media Queries para Responsividade (melhora o visual em telas menores) -- */
+@media (max-width: 768px) {
+    .servico-card {
+        width: 45%; /* 2 cards por linha em mobile */
+        margin: 10px 0;
+    }
+    header nav {
+        float: none;
+        text-align: center;
+        padding-top: 10px;
+    }
+    header h1 {
+        float: none;
+        text-align: center;
+    }
 }
