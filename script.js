@@ -1,12 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const ctaButton = document.getElementById('cta-button');
-
-    // Adiciona um evento de clique ao botão
-    ctaButton.addEventListener('click', function() {
-        // Redireciona o usuário para a seção de contato ao clicar
-        window.location.href = '#contato'; 
+    
+    // Smooth scrolling para os links de navegação (melhora a UX)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
 
-    // Você pode adicionar mais interatividade aqui, como validação de formulários, etc.
-    console.log("Site carregado e script funcionando!");
+    // Ação ao enviar o formulário (apenas demonstração)
+    const form = document.querySelector('#contato form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Em um site real, aqui você enviaria os dados para um servidor (backend)
+            alert('Sua solicitação de orçamento foi enviada com sucesso! Entraremos em contato em breve. (Demonstração)');
+            form.reset();
+        });
+    }
+
+    console.log("Site Buscac carregado com interatividade.");
 });
