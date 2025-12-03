@@ -1,32 +1,40 @@
-/* Definições globais */
+/* Configurações básicas */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f4f4f9;
+    background-color: #f8f9fa; /* Fundo levemente cinza */
+    line-height: 1.6;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
+    clear: both;
 }
 
-/* Header (Cabeçalho) */
+h1, h2, h3 {
+    color: #007bff; /* Azul primário */
+}
+
+/* Header */
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header h1 {
     margin: 0;
     float: left;
+    font-size: 1.8em;
 }
 
 header nav {
     float: right;
+    padding-top: 5px;
 }
 
 header nav ul {
@@ -37,13 +45,18 @@ header nav ul {
 
 header nav ul li {
     display: inline;
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 header nav ul li a {
-    color: white;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #28a745; /* Verde de destaque */
 }
 
 /* Limpar float */
@@ -53,28 +66,39 @@ header nav ul li a {
     clear: both;
 }
 
-/* Seção Hero (Destaque) */
+/* Seção Hero */
 .hero-section {
-    background: #0056b3;
+    background-color: #007bff;
     color: white;
     text-align: center;
-    padding: 100px 0;
+    padding: 100px 20px;
 }
 
 .hero-section h2 {
-    font-size: 2.5em;
+    color: white;
+    font-size: 3em;
     margin-bottom: 10px;
 }
 
-#cta-button {
-    background-color: #28a745;
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button-a {
+    display: inline-block;
+    background-color: #28a745; /* Verde de destaque */
     color: white;
-    border: none;
     padding: 15px 30px;
+    text-decoration: none;
     font-size: 1.1em;
-    cursor: pointer;
     border-radius: 5px;
-    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.cta-button-a:hover {
+    background-color: #218838;
 }
 
 /* Seção de Serviços */
@@ -83,28 +107,123 @@ header nav ul li a {
     text-align: center;
 }
 
-#servicos h3 {
-    font-size: 2em;
-    margin-bottom: 40px;
-    color: #007bff;
+.servicos-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-.servico-item {
-    background-color: white;
+.servico-card {
+    background: white;
     border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px;
-    display: inline-block;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 15px;
     width: 30%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
 }
 
-/* Footer (Rodapé) */
+.servico-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.servico-card i {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.servico-card h4 {
+    margin-top: 0;
+}
+
+/* Seção Como Funciona */
+.alt-bg {
+    background-color: #e9ecef; /* Fundo secundário */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.passos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.passo-item {
+    width: 30%;
+    padding: 20px;
+}
+
+.passo-item .numero {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+/* Formulário de Contato */
+#contato {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#contato form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#contato input[type="text"],
+#contato input[type="email"],
+#contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#contato textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.cta-button-b {
+    background-color: #007bff; /* Azul primário */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button-b:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
 footer {
-    background-color: #333;
+    background-color: #343a40; /* Cinza escuro */
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 30px;
+    margin-top: 40px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
 }
