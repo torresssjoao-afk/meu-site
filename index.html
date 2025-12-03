@@ -15,7 +15,7 @@
                 <ul>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#como-funciona">Como Funciona</a></li>
-                    <li><a href="#contato">Solicitar Orçamento</a></li>
+                    <li><a href="#contato">Orçamento</a></li>
                 </ul>
             </nav>
         </div>
@@ -23,9 +23,10 @@
 
     <section id="hero" class="hero-section">
         <div class="container">
-            <h2>Encontre o Profissional Ideal. Rápido e Fácil.</h2>
-            <p>Conectamos você aos melhores prestadores de serviço da sua região.</p>
-            <a href="#servicos" class="cta-button-a">Ver Serviços</a>
+            <h2>Olá, o que você gostaria de melhorar hoje?</h2>
+            <input type="text" id="search-bar" placeholder="Pesquisar serviço ou especialidade...">
+            <p>Serviços Populares: Eletricista, Limpeza de Casa, Mecânico.</p>
+            <a href="#servicos" class="cta-button-a" style="margin-top: 20px;">VER TODAS AS CATEGORIAS</a>
         </div>
     </section>
 
@@ -35,18 +36,35 @@
             <div class="servicos-grid">
                 <div class="servico-card">
                     <i class="fas fa-hammer"></i>
-                    <h4>Reforma e Construção</h4>
-                    <p>Encanadores, eletricistas, pedreiros e mais.</p>
+                    <h4>Construção</h4>
                 </div>
                 <div class="servico-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h4>Tecnologia e TI</h4>
-                    <p>Manutenção de computadores, webdesigners e suporte técnico.</p>
+                    <i class="fas fa-tint"></i>
+                    <h4>Encanador</h4>
+                </div>
+                <div class="servico-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Eletricista</h4>
                 </div>
                 <div class="servico-card">
                     <i class="fas fa-broom"></i>
-                    <h4>Serviços Domésticos</h4>
-                    <p>Diaristas, babás, jardineiros e limpeza especializada.</p>
+                    <h4>Diarista</h4>
+                </div>
+                <div class="servico-card">
+                    <i class="fas fa-utensils"></i>
+                    <h4>Culinária</h4>
+                </div>
+                <div class="servico-card">
+                    <i class="fas fa-car-side"></i>
+                    <h4>Mecânico</h4>
+                </div>
+                <div class="servico-card">
+                    <i class="fas fa-cut"></i>
+                    <h4>Cabeleireiro</h4>
+                </div>
+                <div class="servico-card">
+                    <i class="fas fa-paw"></i>
+                    <h4>Pet Sitter</h4>
                 </div>
             </div>
         </div>
@@ -58,18 +76,18 @@
             <div class="passos">
                 <div class="passo-item">
                     <span class="numero">1</span>
-                    <h4>Descreva a Necessidade</h4>
-                    <p>Use nosso formulário para detalhar o serviço que você precisa.</p>
+                    <h4>Solicite o Serviço</h4>
+                    <p>Descreva o que precisa no formulário abaixo.</p>
                 </div>
                 <div class="passo-item">
                     <span class="numero">2</span>
-                    <h4>Receba Orçamentos</h4>
-                    <p>Profissionais qualificados enviarão propostas diretamente a você.</p>
+                    <h4>Receba Propostas</h4>
+                    <p>Profissionais próximos enviam orçamentos.</p>
                 </div>
                 <div class="passo-item">
                     <span class="numero">3</span>
-                    <h4>Escolha e Contrate</h4>
-                    <p>Compare perfis e preços e contrate o melhor para o seu projeto.</p>
+                    <h4>Avalie e Contrate</h4>
+                    <p>Compare perfis e feche o melhor negócio.</p>
                 </div>
             </div>
         </div>
@@ -81,7 +99,7 @@
             <form action="#" method="POST">
                 <input type="text" name="nome" placeholder="Seu Nome" required>
                 <input type="email" name="email" placeholder="Seu Email" required>
-                <textarea name="servico" placeholder="Descreva o serviço que você precisa..." required></textarea>
+                <textarea name="servico" placeholder="Descreva o serviço que você precisa e sua localização..." required></textarea>
                 <button type="submit" class="cta-button-b">Enviar Solicitação</button>
             </form>
         </div>
